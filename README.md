@@ -1,2 +1,2 @@
-# Mini-project-Web-development
+# Mini project-Web development
 Travel guide website for tourists.
