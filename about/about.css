@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans" , sans-serif;
+	box-sizing: border-box;
+}
+
+body{
+/* 	display: inline; */
+	min-height: 100 vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f1f1f1;
+	
+}
+
+.AboutSection{
+	
+	
+	background: url(Sigiriya-Lions-Rock-Fortress.jpg)no-repeat left;
+	background-size: 55%;
+	background-color: #fdfdfd;
+	overflow: hidden;
+	padding: 100 px 0;
+	
+	
+}
+
+.innerContainer{
+	width: 55%;
+	float: right;
+	background-color: #ffd01f;
+	padding: 150px;
+}
+.innerContainer h1{
+	text-align: justify;
+	margin-bottom: 30 px;
+	font-size: 30 px;
+	font-weight: 700;
+	
+}
+.innerContainer h3{
+	text-align: center;
+	margin-bottom: 30 px;
+	font-size: 30 px;
+	font-weight: 100;
+	
+}
+.content{
+	font-size: 13 px;
+	color: #545454;
+	line-height: 30 px;
+	text-align: justify;
+	margin-bottom: 40px;
+
+}
+.offers ul{
+	display: flex;
+	justify-content: space-between;
+	font-weight: 700;
+	font-size: 13 px;
+}
+
+@media screen and (max-width: 1200 px){
+	.innerContainer{
+		padding: 80 px;
+		
+	}
+}
+
+@media screen and (max-width:1000 px){
+	.AboutSection{
+		background-size: 100%;
+		padding: 100 px 40 px;
+		
+	}
+	
+	.innerContainer{
+		width = 100%;
+	}
+}
+@media screen and (max-width: 600 px){
+	.AboutSection{
+		
+		padding: 0;
+	}
+	
+	.innerContainer{
+		width = 10%;
+	}
+}
