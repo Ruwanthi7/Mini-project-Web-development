@@ -1,11 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Packages</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../travelguide.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h4>packages</h4>
+
+
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand h1" href="../travelguide.html"><i class="fa fa-home" style="font-size:24px;color:#F7B811"></i>&nbspHome</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#newsMenu    "aria-controls="newsMenu" aria-expanded="false" aria-label=" toggle-navigation">
+                <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="newsMenu">
+    
+    
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+            <a class= "nav-link h6"href="packages.html"><i class="fa fa-automobile" style="font-size:24px;color:#F7B811"></i>&nbspPackages<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h6" href="../index.html"><i class="fa fa-address-book" style="font-size:24px;color:#F7B811"></i>&nbspContact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h6" href="../about/about.html"><i class="fa fa-group" style="font-size:24px;color:#F7B811"></i>&nbspAbout Us</a>
+            </li>
+            
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+            </form>
+    </div>
+    </nav>
+ 
+	<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron jumbotron bg-cover" style="background-image: url(photos/galle1.jpg)"  >
+					<div class="overlay"></div>
+
+					<h3 class="display-4"></h3>
+					
+					<p >You Decide.We Provide. </p>
+					<button type="button" class="btn btn-warning btn-lg">Book Now</button>
+				</div>
+			</div>
+		</div>
+		 
+
+		<div class="row ">
+			<div class="col-md-12 ">
+                <h3 class="text-center ">OUR PACKAGES</h3>
+                <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sint maxime quasi harum ad repudiandae ipsa. Ratione, iste ab aut maiores ducimus non ex doloremque tenetur unde dicta recusandae repudiandae.</p>
+				<hr class="my-4">
+			</div>
+		</div>
+		<div class="row">
+            <!-- ****Down south Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/mirissa.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/fort.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/secrate.jpg" alt="Third slide">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Down South </h5>
+                    <p class="card-text"><strong>Places</strong>  Hikkaduwa, Galle, Mirrissa, Unawatuna, Koggala, Hambanthota, Katharagama</p>
+                    <p class="card-text"><strong>Two Nights</strong>:&emsp;Galle, Hambanthota</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.30000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.50000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.80000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package Down South')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- ****Kandy Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/kandy2.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/nuwaraeliya.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/kithul.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kandy </h5>
+                    <p class="card-text"><strong>Places</strong>&emsp;Kandy, Nuwaraeliya,Mandaram Nuwara, Hortain Plains, Kithulgala</p>
+                    <p class="card-text"><strong>Two Nights</strong>:&emsp;Kandy, Nuwaraeliya</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.40000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.70000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.100,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package Kandy')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <!-- ****End of Kandy Package**** -->
+                
+            <!-- ****Uva Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/ella1.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/a1.png" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/miniadam.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Uva </h5>
+                    <p class="card-text"><strong>Places</strong>&emsp;Ella, Bandarawela, Haputhale, Lipton Seat, Belihuloya</p>
+                    <p class="card-text"><strong>Three Nights</strong>:&emsp;2 nights Ella, Haputhale</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.50000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.90000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.130,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package Uva')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <!-- ****End of Uva Package**** -->
+
+            <!-- ****North Central Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/anuradhapura.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/anuradhapuraya.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/sigiriya.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">North Central </h5>
+                    <p class="card-text"><strong>Places</strong>&emsp;Dambulla, Sigiriya, Pidurangala, Polonnaruwa, Mihinthale, Anuradhapuraya</p>
+                    <p class="card-text"><strong>Three Nights</strong>:&emsp;Dambulla, Polonnaruwa, Anuradhapuraya</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.50000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.90000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.130,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package North Central')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <!-- ****End of north central Package**** -->
+        </div>
+
+
+        <!-- 2nd row -->
+        </br></br>
+        <div class="row">
+            <!-- ****North West Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/puthalama.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/negambo.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/negambo1.jpg" alt="Third slide">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">North West </h5>
+                    <p class="card-text"><strong>Places</strong>&emsp;Negambo, Puthalam, Kalpitiya, Wilpaththuwa, Thaleimannar, Mannar Island</p>
+                    <p class="card-text"><strong>Two Nights</strong>:&emsp;Negambo, Thaleimannar</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.40,000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.60,000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.90,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package North West')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- ****Eastern Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/trinco.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/pasikuda.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/trinko2.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Eastern</h5>
+                    <p class="card-text"><strong>Places</strong>&emsp;Batticaloa, Kalkuda, Pasikuda, Trincomalee, Nilaveli</p>
+                    <p class="card-text"><strong>Three Nights</strong>:&emsp;Batticaloa, 2 nights Trincomalee</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.50,000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.75,000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.120,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package Eastern')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <!-- ****End of eastern Package**** -->
+                
+            <!-- ****North Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/jaffna1.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/j.jpeg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/jaffana2.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">North</h5>
+                    <p class="card-text"><strong>Places</strong>&emsp;Kilinochchi, Elephant Pass, Jaffna, Point Pedro, Kankasanthurei</p>
+                    <p class="card-text"><strong>Three Nights</strong>:&emsp;Kilinochchi, Jaffna, Kankasanthurei </p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.70,000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.95,000
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.150,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package North')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <!-- ****End of North Package**** -->
+
+            <!-- ****Central Platinum Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/kandy1.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/hortanplains.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/nine arch1.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Central Platinum</h5>
+                    <p class="card-text" style="line-height: 1;"><strong>Places</strong>&emsp;Kandy, Nuwaraeliya,Mandaram Nuwara, Hortain Plains, Kithulgala,Ella, Bandarawela, Haputhale, Lipton Seat,...</p>
+                    <p class="card-text"><strong>Five Nights</strong>:&emsp;Kandy, Nuwaraeliya, 2 Nights Ella, Haputhale</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.80,000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.100,000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.180,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Package Central Platinum')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <!-- ****End of north central platinum Package**** -->
+    </div>
+
+    <!-- 3rd row -->
+    </br></br>
+    <div class="row">
+        <!-- ****North Platinum Package**** -->
+        <div class="col-md-3 col-sm-6 col-s-12">
+            <div class="card" >
+                <div class="card-img-top">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img class="d-block" style="height: 330px;width:100%;" src="photos/north1.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block" style="height: 330px;width:100%;" src="photos/kalpitiya.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block" style="height: 330px;width:100%;" src="photos/jaffana2.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">North Platinum</h5>
+                <p class="card-text" style="line-height: 1;"><strong>Places</strong>&emsp;Kilinochchi, Elephant Pass, Jaffna, Point Pedro, Kankasanthurei,Batticaloa, Kalkuda, Pasikuda, Trincomalee, Nilaveli</p>
+                <p class="card-text"><strong>Five Nights</strong>:&emsp;Kilinochchi, Jaffna, Kankasanthurei, Trincomalee, Batticaloa</p>
+                <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.100,000 
+                    &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.120,000 
+                    &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.200,000 </p>
+
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"> 4 stars</span>
+
+                <a  data-toggle="modal" onclick="detailModel('Package North Platinum')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                </div>
+                
+            </div>
+                
+        </div>
+        <!-- ****End of north platinum Package**** -->
+
+            <!-- ****Customize Package**** -->
+            <div class="col-md-3 col-sm-6 col-s-12">
+                <div class="card" >
+                    <div class="card-img-top">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/kandy1.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/hortanplains.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block" style="height: 330px;width:100%;" src="photos/nine arch1.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Customize Your Package</h5>
+                    <p class="card-text"><strong>Places</strong>&emsp;Hikkaduwa, Galle, Mirrissa, Unawatuna, Koggala, Hambanthota, Katharagama</p>
+                    <p class="card-text"><strong>Two Nights</strong>:&emsp;Galle, Hambanthota</p>
+                    <p style="font-size: 12px;color: gray;"><i class="fa fa-car" aria-hidden="true"></i><strong>Car:</strong>Rs.100,000 
+                        &emsp;<i class="fa fa-train" aria-hidden="true"></i><strong>Van:</strong>Rs.150,000 
+                        &emsp;<i class="fa fa-bus" aria-hidden="true"></i><strong>Bus:</strong>Rs.200,000 </p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"> 4 stars</span>
+
+                    <a  data-toggle="modal" onclick="detailModel('Customize Your Package')" data-target="#exampleModal" class="btn btn-warning">Book Now</a>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <!-- ****End of north platinum Package**** -->
+
+    </div>
+    <!-- end of packages -->
+		
+		<button class="open-button" onclick="openForm()"> Chat Now <i class="fa fa-comment"></i></button>
+
+       <div class="chat-popup" id="myForm">
+    <form action="" class="form-container">
+        <h1>Chat With Us</h1>
+
+        <label for="msg"><b>Send your message anytime </b></label>
+        <textarea placeholder="Type here..." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+    </form>
+</div>
+
+    <!-- footer -->
+    <div style="margin-top:240px;">
+
+
+        
+
+
+    <!-- *********Modal******* -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="head">Booking Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">            
+            <form action="server.php" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Your Name</label>
+                <input type="text" class="form-control" name="name"  placeholder="Enter Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" name="email" class="form-control"  placeholder="Enter email" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Vehicle Type</label>
+                </div>
+                <select name="vehicle" class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Van</option>
+                    <option value="2">Car</option>
+                    <option value="3">Bus</option>
+                </select>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Required Date</label>
+                <input name="date" type="date" class="form-control" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Phone</label>
+                <input name="phone" type="tel" class="form-control"  placeholder="Enter phone number" required>
+            </div>
+
+
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <input type="submit" name="submit" class="btn btn-primary" value="Confirm">
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    <!-- *********End of the Modal******* -->
+
+<hr>
+
+<script type="text/javascript">
+	function openForm(){
+		document.getElementById("myForm").style.display = "block";
+	}
+	function closeForm(){
+		document.getElementById("myForm").style.display = "none";
+	}
+
+    function detailModel(package){
+        document.getElementById('head').innerHTML=package; 
+    }
+  
+
+</script>
+<script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+
+
+	
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
