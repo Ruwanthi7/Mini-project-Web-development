@@ -1,3 +1,8 @@
+<?php
+include("server.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,57 +93,49 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fa fa-table mr-1"></i>
-                            DataTable Example
+                            All Booking Details
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th scope="col">ID</th>                                            
+                                            <th scope="col">NAME</th>
+                                            <th scope="col">EMAIL</th>
+                                            <th scope="col">VEHICLE</th>
+                                            <th scope="col">REQUIRED DATE</th>
+                                            <th scope="col">PHONE</th>
+                                            <th scope="col">PACKAGE</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th scope="col">ID</th>                                            
+                                            <th scope="col">NAME</th>
+                                            <th scope="col">EMAIL</th>
+                                            <th scope="col">VEHICLE</th>
+                                            <th scope="col">REQUIRED DATE</th>
+                                            <th scope="col">PHONE</th>
+                                            <th scope="col">PACKAGE</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
+                                        <?php
+                                            $result=mysqli_query($mysqli,"SELECT * FROM packages ORDER by id ASC");
+                                            while ($row=mysqli_fetch_array($result)) {
+                                                echo '<tr>';
+                                                echo '<td>' .$row['id']. '</td>';
+                                                echo '<td>' .$row['name']. '</td>';
+                                                echo '<td>' .$row['email']. '</td>';
+                                                echo '<td>' .$row['vehicle']. '</td>';
+                                                echo '<td>' .$row['required_date']. '</td>';
+                                                echo '<td>' .$row['phone']. '</td>';
+                                                echo '</tr>';
+                                            }
 
+
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>

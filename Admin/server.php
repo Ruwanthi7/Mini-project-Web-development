@@ -17,6 +17,7 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
             $phone=$_POST['phone'];
             $date=$_POST['date'];
             $vehicle=$_POST['vehicle'];
+            $package=$_POST['package'];
 
             if($vehicle==1){
                 $vehicle="Van";
@@ -29,9 +30,9 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
             }
             
 
-            $res=mysqli_query($mysqli,"INSERT INTO packages values('','$name','$email','$vehicle','$date','$phone')");
+            $res=mysqli_query($mysqli,"INSERT INTO packages values('','$name','$email','$vehicle','$date','$phone','$package')");
             if($res){
-                header("location: packages.html");
+                header("location: ../Packages/packages.html");
 
             }
             else{
