@@ -11,13 +11,14 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
 ?>
 
 <?php
+
         if(isset($_POST['submit'])){
             $name=$_POST['name'];
             $email=$_POST['email'];
             $phone=$_POST['phone'];
             $date=$_POST['date'];
             $vehicle=$_POST['vehicle'];
-            $package=$_POST['package'];
+            $package=$_POST['pname'];
 
             if($vehicle==1){
                 $vehicle="Van";

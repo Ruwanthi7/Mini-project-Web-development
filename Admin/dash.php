@@ -131,6 +131,7 @@ include("server.php");
                                                 echo '<td>' .$row['vehicle']. '</td>';
                                                 echo '<td>' .$row['required_date']. '</td>';
                                                 echo '<td>' .$row['phone']. '</td>';
+                                                echo '<td>' .$row['package']. '</td>';
                                                 echo '</tr>';
                                             }
 
