@@ -1,7 +1,7 @@
 <?php
 
 $dbhost="localhost";
-$dbname="practice4";
+$dbname="Travel";
 $dbusername="root";
 $dbpass="";
 
@@ -16,9 +16,10 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
             $name=$_POST['name'];
             $email=$_POST['email'];
             $phone=$_POST['phone'];
-            $date=$_POST['date'];
+            $date= date("j-n-y") ;
             $vehicle=$_POST['vehicle'];
             $package=$_POST['pname'];
+            $required_date=$_POST['date'];;
 
             if($vehicle==1){
                 $vehicle="Van";
@@ -31,7 +32,7 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
             }
             
 
-            $res=mysqli_query($mysqli,"INSERT INTO packages values('','$name','$email','$vehicle','$date','$phone','$package')");
+            $res=mysqli_query($mysqli,"INSERT INTO packages values('','$date','$name','$email','$vehicle','$package','$required_date','$phone')");
             if($res){
                 header("location: ../Packages/packages.html");
 

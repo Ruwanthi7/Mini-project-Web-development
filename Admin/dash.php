@@ -100,24 +100,26 @@ include("server.php");
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">ID</th>                                            
+                                            <th scope="col">ID</th>    
+                                            <th scope="col">DATE</th>                                        
                                             <th scope="col">NAME</th>
                                             <th scope="col">EMAIL</th>
-                                            <th scope="col">VEHICLE</th>
+                                            <th scope="col">VEHICLE</th>                                             
+                                            <th scope="col">PACKAGE</th>
                                             <th scope="col">REQUIRED DATE</th>
                                             <th scope="col">PHONE</th>
-                                            <th scope="col">PACKAGE</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th scope="col">ID</th>                                            
+                                            <th scope="col">ID</th>    
+                                            <th scope="col">DATE</th>                                        
                                             <th scope="col">NAME</th>
                                             <th scope="col">EMAIL</th>
-                                            <th scope="col">VEHICLE</th>
+                                            <th scope="col">VEHICLE</th>                                            
+                                            <th scope="col">PACKAGE</th>
                                             <th scope="col">REQUIRED DATE</th>
                                             <th scope="col">PHONE</th>
-                                            <th scope="col">PACKAGE</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -126,12 +128,13 @@ include("server.php");
                                             while ($row=mysqli_fetch_array($result)) {
                                                 echo '<tr>';
                                                 echo '<td>' .$row['id']. '</td>';
+                                                echo '<td>' .$row['date']. '</td>';
                                                 echo '<td>' .$row['name']. '</td>';
                                                 echo '<td>' .$row['email']. '</td>';
-                                                echo '<td>' .$row['vehicle']. '</td>';
+                                                echo '<td>' .$row['vehical']. '</td>';                                                
+                                                echo '<td>' .$row['package']. '</td>';
                                                 echo '<td>' .$row['required_date']. '</td>';
                                                 echo '<td>' .$row['phone']. '</td>';
-                                                echo '<td>' .$row['package']. '</td>';
                                                 echo '</tr>';
                                             }
 
