@@ -6,13 +6,14 @@ form {
     margin-top: 100px;
 }
 
-input[type=text], input[type=password] {
+input[type=email], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 3px solid #ccc;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 button {
@@ -23,6 +24,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  border-radius: 5px;
 }
 
 button:hover {
@@ -52,6 +54,12 @@ img.avatar {
 span.psw {
   float: right;
   padding-top: 16px;
+}
+
+.login{
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
 }
 
 /* Change styles for span and cancel button on extra small screens */

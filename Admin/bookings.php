@@ -41,27 +41,10 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
                 echo 'alert("Failed")';
             }
 
-            // if(empty($res)){
-            //     // ****if doesn't exists****//
-            // $res=mysqli_query($mysqli,"CREATE TABLE IF NOT EXISTS `test_q` (
-            //     `id` int(30) NOT NULL AUTO_INCREMENT,
-            //     `name` varchar(255) NOT NULL,
-            //     `email` varchar(255) NOT NULL,
-            //     `vehicle` varchar(255) NOT NULL,
-            //     `required_date` date NOT NULL,
-            //     `phone` int(30) NOT NULL,
-            //     PRIMARY KEY (`id`),
-            //     ) ");
-            // }
-            // else{
-                
-
-            //}
-
-
-            
-
         }
+
+             
+        
 
 ?>
 

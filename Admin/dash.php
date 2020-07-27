@@ -1,7 +1,16 @@
 <?php
-include("server.php");
-
+include("bookings.php");
 ?>
+
+<?php session_start(); ?>
+
+ 
+<?php
+if(!isset($_SESSION['useremail'])){  
+        header("Location: ../travelguide.html");
+    } 
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +20,7 @@ include("server.php");
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -20,27 +30,39 @@ include("server.php");
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="dash.html">
+                        <a class="nav-link" href="dash.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-tachometer" aria-hidden="true"></i></div>
                             &nbsp Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Interface</div>
-                        <a class="nav-link collapsed" href="dash.html" data-toggle="collapse" data aria-expanded="false" aria-controls="collapseLayouts">
+                        <a class="nav-link collapsed" href="dash.php" data-toggle="collapse" data aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fa fa-area-chart"></i></div>
                             &nbsp Bookings
                             <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
                         </a>
-                        <a class="nav-link collapsed" href="reg.html" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
+                        <a class="nav-link collapsed" href="reg.php" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fa fa-user-plus"></i></div>
                             &nbsp Admin Registration
                             <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
                         </a>
+                        <a class="nav-link collapsed" href="view.php" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fa fa-eye" aria-hidden="true"></i></div>
+                            &nbsp View Users
+                            <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
+                        </a>
+                        <a class="nav-link collapsed" href="logout.php" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+                            &nbsp Logout
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
+                        
+                        
                         
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    <?php echo  $_SESSION['userLoggedin']  ?>
                 </div>
             </nav>
         </div>
@@ -88,6 +110,7 @@ include("server.php");
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
 
                     <div class="card mb-4">
@@ -95,11 +118,17 @@ include("server.php");
                             <i class="fa fa-table mr-1"></i>
                             All Booking Details
                         </div>
+
+
+
+
+
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th scope="col">SELECT</th>
                                             <th scope="col">ID</th>    
                                             <th scope="col">DATE</th>                                        
                                             <th scope="col">NAME</th>
@@ -108,10 +137,12 @@ include("server.php");
                                             <th scope="col">PACKAGE</th>
                                             <th scope="col">REQUIRED DATE</th>
                                             <th scope="col">PHONE</th>
+                                            <th scope="col">Accept/Reject</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
+                                            <th scope="col">SELECT</th>
                                             <th scope="col">ID</th>    
                                             <th scope="col">DATE</th>                                        
                                             <th scope="col">NAME</th>
@@ -120,28 +151,34 @@ include("server.php");
                                             <th scope="col">PACKAGE</th>
                                             <th scope="col">REQUIRED DATE</th>
                                             <th scope="col">PHONE</th>
+                                            <th scope="col">Accept/Reject</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php
                                             $result=mysqli_query($mysqli,"SELECT * FROM packages ORDER by id ASC");
-                                            while ($row=mysqli_fetch_array($result)) {
-                                                echo '<tr>';
-                                                echo '<td>' .$row['id']. '</td>';
-                                                echo '<td>' .$row['date']. '</td>';
-                                                echo '<td>' .$row['name']. '</td>';
-                                                echo '<td>' .$row['email']. '</td>';
-                                                echo '<td>' .$row['vehical']. '</td>';                                                
-                                                echo '<td>' .$row['package']. '</td>';
-                                                echo '<td>' .$row['required_date']. '</td>';
-                                                echo '<td>' .$row['phone']. '</td>';
-                                                echo '</tr>';
-                                            }
-
-
+                                            while ($row=mysqli_fetch_array($result)) { 
                                         ?>
+                                                <tr>
+                                                <form action="./deleteBookings.php" method="POST">
+                                                    <td> <input type="checkbox" name="keyToDelete" value="<?php echo $row['id'];   ?>"> </td>
+                                                    <td> <?php echo $row['id'];    ?> </td>
+                                                    <td> <?php echo $row['name'];    ?> </td>
+                                                    <td> <?php echo $row['name'];    ?> </td>
+                                                    <td> <?php echo $row['email'];    ?> </td>
+                                                    <td> <?php echo $row['vehical'];    ?> </td>
+                                                    <td> <?php echo $row['package'];    ?> </td>
+                                                    <td> <?php echo $row['required_date'];    ?> </td>
+                                                    <td> <?php echo $row['phone'];    ?> </td>
+                                                    <td > <div style="margin:auto">&nbsp &nbsp <i style="color:blue" class="fa fa-check-circle" aria-hidden="true"></i> &nbsp &nbsp <button name="delete"> <i style="color:red"  class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
+                                                </form>
+                                                </tr>
+
+                                    <?php   } ?>
+
                                     </tbody>
                                 </table>
+                                
                             </div>
                         </div>
                     </div>
@@ -152,5 +189,11 @@ include("server.php");
                 </div>
         </div>
     </div>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <script type="text/javascript">
+        AOS.init();
+    </script>
 </body>
 </html>
