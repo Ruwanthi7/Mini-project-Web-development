@@ -4,9 +4,9 @@ include("user.php");
 ?>
 <?php session_start(); ?>
 <?php
-if(!isset($_SESSION['useremail'])){  
-        header("Location: ../travelguide.html");
-    } 
+// if(!isset($_SESSION['useremail'])){  
+//         header("Location: ../travelguide.html");
+//     } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,6 +92,7 @@ if(!isset($_SESSION['useremail'])){
                                     </tfoot>
                                     <tbody>
                                         <?php
+                                            $mysqli=mysqli_connect("localhost","root","","travel1");
                                             $result=mysqli_query($mysqli,"SELECT * FROM user ORDER by id ASC");
                                             while ($row=mysqli_fetch_array($result)) {
                                         ?>

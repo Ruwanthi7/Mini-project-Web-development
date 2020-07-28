@@ -1,6 +1,6 @@
 <?php
 $dbhost="localhost";
-$dbname="Travel";
+$dbname="travel1";
 $dbusername="root";
 $dbpass="";
 
@@ -42,10 +42,12 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
 
         }
 
-        if($email!== $db_email && $password!==$db_password){
-            header("Location: ../travelguide.html");
-        }
-        else if($email== $db_email && $password==$db_password){
+        // if($email!== $db_email && $password!==$db_password){
+        //     header("Location: ../travelguide.html");
+
+        // }
+        // else 
+        if($email== $db_email && $password==$db_password){
             $_SESSION['userLoggedin']=$db_fname;
             $_SESSION['useremail']=$db_email;
             $_SESSION['userpassword']=$db_password;
@@ -54,6 +56,7 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
         }
         else{
             header("Location: ../travelguide.html");
+        
         }
 
     }

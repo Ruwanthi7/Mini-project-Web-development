@@ -2,7 +2,7 @@
 <?php
 
 $dbhost="localhost";
-$dbname="Travel";
+$dbname="travel1";
 $dbusername="root";
 $dbpass="";
 
@@ -21,7 +21,7 @@ if(isset($_POST['delete']))
     header("location: dash.php");
     
     
-    $result=mysqli_query($mysqli,"DELETE FROM packages where id=$key");
+    $result=mysqli_query($mysqli,"DELETE FROM bookings where id=$key");
     if(!$result){
         die("Query Failed" .mysqli_error($mysqli));
 

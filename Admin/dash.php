@@ -4,12 +4,12 @@ include("bookings.php");
 
 <?php session_start(); ?>
 
- 
-<?php
-if(!isset($_SESSION['useremail'])){  
-        header("Location: ../travelguide.html");
-    } 
+ <?php
+// if(!isset($_SESSION['useremail'])){  
+//         header("Location: ../travelguide.html");
+//     } 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -156,8 +156,9 @@ if(!isset($_SESSION['useremail'])){
                                     </tfoot>
                                     <tbody>
                                         <?php
-                                            $result=mysqli_query($mysqli,"SELECT * FROM packages ORDER by id ASC");
-                                            while ($row=mysqli_fetch_array($result)) { 
+                                            $mysqli=mysqli_connect("localhost","root","","travel1");
+                                            $result1=mysqli_query($mysqli,"SELECT * FROM bookings ORDER by id ASC");
+                                            while ($row=mysqli_fetch_array($result1)) { 
                                         ?>
                                                 <tr>
                                                 <form action="./deleteBookings.php" method="POST">

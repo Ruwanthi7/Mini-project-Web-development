@@ -1,11 +1,11 @@
 <?php session_start(); ?>
 
  
-<?php
-if(!isset($_SESSION['useremail'])){  
-        header("Location: ../travelguide.html");
-    } 
-?>
+<!-- <?php
+// if(!isset($_SESSION['useremail'])){  
+//         header("Location: ../travelguide.html");
+//     } 
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
