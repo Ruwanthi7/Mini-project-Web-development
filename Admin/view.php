@@ -4,9 +4,9 @@ include("user.php");
 ?>
 <?php session_start(); ?>
 <?php
-// if(!isset($_SESSION['useremail'])){  
-//         header("Location: ../travelguide.html");
-//     } 
+if(!isset($_SESSION['useremail'])){  
+        header("Location: ../travelguide.html");
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +44,11 @@ include("user.php");
                             <div class="sb-nav-link-icon"><i class="fa fa-eye" aria-hidden="true"></i></div>
                             &nbsp View Users
                             <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
+                        </a>
+                        <a class="nav-link collapsed" href="../travelguide.html" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+                            &nbsp Back to Menu
+                            <div class="sb-sidenav-collapse-arrow"></div>
                         </a>
                         <a class="nav-link collapsed" href="logout.php" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>

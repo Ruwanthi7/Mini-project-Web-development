@@ -5,9 +5,9 @@ include("bookings.php");
 <?php session_start(); ?>
 
  <?php
-// if(!isset($_SESSION['useremail'])){  
-//         header("Location: ../travelguide.html");
-//     } 
+if(!isset($_SESSION['useremail'])){  
+        header("Location: ../travelguide.html");
+    } 
 ?>
 
 
@@ -50,6 +50,11 @@ include("bookings.php");
                             &nbsp View Users
                             <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
                         </a>
+                        <a class="nav-link collapsed" href="../travelguide.html" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+                            &nbsp Back to Menu
+                            <div class="sb-sidenav-collapse-arrow"></div>
+                        </a>
                         <a class="nav-link collapsed" href="logout.php" data-toggle="collapse"  aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
                             &nbsp Logout
@@ -68,50 +73,110 @@ include("bookings.php");
         </div>
         <div id="layoutSidenav_content">
             <main>
-                <div class="container-fluid">
+                <div class="container-fluid" >
                     <h1 class="mt-4">Dashboard</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
-                    <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-primary text-white mb-4">
-                                <div class="card-body">Primary Card</div>
+                    <div class="row" >
+                        <div class="col-xl-2 col-md-3" style="margin:auto">
+                            <div class="card bg-primary text-white mb-5">
+                                <div class="card-body">Down South</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-warning text-white mb-4">
-                                <div class="card-body">Warning Card</div>
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-warning text-white mb-5">
+                                <div class="card-body">Kandy</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-success text-white mb-4">
-                                <div class="card-body">Success Card</div>
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-success text-white mb-5">
+                                <div class="card-body">Uva</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-danger text-white mb-4">
-                                <div class="card-body">Danger Card</div>
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-danger text-white mb-5">
+                                <div class="card-body">North Central</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-danger text-white mb-5">
+                                <div class="card-body">North West</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <div class="small text-white"><i class="fa fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>    
+                                         
                     </div>
+
+                    <div class="row" >
+                        <div class="col-xl-2 col-md-3" style="margin:auto">
+                            <div class="card bg-primary text-white mb-5">
+                                <div class="card-body">Eastern</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <div class="small text-white"><i class="fa fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-warning text-white mb-5">
+                                <div class="card-body">North</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <div class="small text-white"><i class="fa fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-success text-white mb-5">
+                                <div class="card-body">Central Platinum</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <div class="small text-white"><i class="fa fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-danger text-white mb-5">
+                                <div class="card-body">North Platinum</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <div class="small text-white"><i class="fa fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                            <div class="card bg-danger text-white mb-5">
+                                <div class="card-body">Custom</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <div class="small text-white"><i class="fa fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>    
+                                         
+                    </div>
+
+
 
                     <div class="card mb-4">
                         <div class="card-header">
