@@ -161,8 +161,8 @@ include("bookings.php");
                                             while ($row=mysqli_fetch_array($result1)) { 
                                         ?>
                                                 <tr>
-                                                <form action="./deleteBookings.php" method="POST">
-                                                    <td> <input type="checkbox" name="keyToDelete" value="<?php echo $row['id'];   ?>"> </td>
+                                                <form onload="loadForm()" action="./deleteBookings.php" method="POST">
+                                                    <td> <input id="check" onClick="deleteRow()" type="checkbox" name="keyToDelete" value="<?php echo $row['id'];   ?>"> </td>
                                                     <td> <?php echo $row['id'];    ?> </td>
                                                     <td> <?php echo $row['name'];    ?> </td>
                                                     <td> <?php echo $row['name'];    ?> </td>
@@ -171,7 +171,7 @@ include("bookings.php");
                                                     <td> <?php echo $row['package'];    ?> </td>
                                                     <td> <?php echo $row['required_date'];    ?> </td>
                                                     <td> <?php echo $row['phone'];    ?> </td>
-                                                    <td > <div style="margin:auto">&nbsp &nbsp <i style="color:blue" class="fa fa-check-circle" aria-hidden="true"></i> &nbsp &nbsp <button name="delete"> <i style="color:red"  class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
+                                                    <td > <div style="margin:auto">&nbsp &nbsp <i style="color:blue" class="fa fa-check-circle" aria-hidden="true"></i> &nbsp &nbsp <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;" id="buttonDel" name="delete" > <i style="color:red"  class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
                                                 </form>
                                                 </tr>
 
@@ -195,6 +195,19 @@ include("bookings.php");
 
     <script type="text/javascript">
         AOS.init();
+
+        function loadForm(){
+            document.getElementById("buttonDel").disabled = true;
+        }
+
+        function deleteRow(){
+            var checkBox = document.getElementById("check");
+
+            if(checkBox==true){
+                document.getElementById("buttonDel").disabled = false;
+            }
+        }                                       
+
     </script>
 </body>
 </html>

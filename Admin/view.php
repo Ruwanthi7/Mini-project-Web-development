@@ -97,13 +97,13 @@ include("user.php");
                                             while ($row=mysqli_fetch_array($result)) {
                                         ?>
                                             <tr>
-                                            <form action="./deleteBookings.php" method="POST">
-                                                <td> <input type="checkbox" name="keyToDeleteAdmin" value="<?php echo $row['id'];   ?>"> </td>
+                                            <form onload="loadForm()" action="./deleteBookings.php" method="POST">
+                                                <td> <input type="checkbox" id="check" onClick="deleteRow()" name="keyToDeleteAdmin" value="<?php echo $row['id'];   ?>"> </td>
                                                 <td> <?php echo $row['id']  ?></td>
                                                 <td> <?php echo $row['first_name']  ?></td>
                                                 <td> <?php echo $row['last_name']  ?></td>
                                                 <td> <?php echo $row['email']  ?></td>
-                                                <td > <div style="margin:auto">&nbsp &nbsp &nbsp &nbsp <button name="deleteAdmin"> <i style="color:red" class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
+                                                <td > <div style="margin:auto">&nbsp &nbsp &nbsp &nbsp <button id="buttonDel" style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;" name="deleteAdmin"> <i style="color:red" class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
                                             </form>   
                                             </tr>
 
@@ -120,20 +120,28 @@ include("user.php");
         <div>
 
 
-
         <div style="margin-bottom: 900px;" class="container-fluid"></div>
      
     </div>
+
+    <script type="text/javascript">
+
+        function loadForm(){
+            document.getElementById("buttonDel").disabled = true;
+        }
+
+        function deleteRow(){
+            var checkBox = document.getElementById("check");
+
+            if(checkBox==true){
+                document.getElementById("buttonDel").disabled = false;
+            }
+        }                                       
+
+    </script>
 
 </body>
 
 
 
-<!-- // echo '<tr>';
-                                                // echo '<td>' .$row['id']. '</td>';
-                                                // echo '<td>' .$row['first_name']. '</td>';
-                                                // echo '<td>' .$row['last_name']. '</td>';
-                                                // echo '<td>' .$row['email']. '</td>';
-                                                // echo '<td > <div style="margin:auto">&nbsp &nbsp &nbsp &nbsp <i style="color:red" class="fa fa-trash-o" aria-hidden="true"></i> </div></td>';
-                                                // echo '</tr>'; -->
 </html>
