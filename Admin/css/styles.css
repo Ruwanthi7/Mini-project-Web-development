@@ -168,5 +168,9 @@ th{
   align-items: center;
 }
 
+.col-xl-2{
+  cursor: pointer;
+}
+
 
 

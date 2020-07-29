@@ -76,47 +76,47 @@ if(!isset($_SESSION['useremail'])){
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                     <div class="row" >
-                        <div class="col-xl-2 col-md-3" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package Down South')" class="col-xl-2 col-md-3" style="margin:auto">
                             <div class="card bg-primary text-white mb-5">
                                 <div class="card-body">Down South</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package Kandy')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-warning text-white mb-5">
                                 <div class="card-body">Kandy</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package Uva')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-success text-white mb-5">
                                 <div class="card-body">Uva</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package North Central')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-danger text-white mb-5">
                                 <div class="card-body">North Central</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package North West')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-danger text-white mb-5">
                                 <div class="card-body">North West</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
@@ -125,47 +125,47 @@ if(!isset($_SESSION['useremail'])){
                     </div>
 
                     <div class="row" >
-                        <div class="col-xl-2 col-md-3" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package Eastern')" class="col-xl-2 col-md-3" style="margin:auto">
                             <div class="card bg-primary text-white mb-5">
                                 <div class="card-body">Eastern</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('North')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-warning text-white mb-5">
                                 <div class="card-body">North</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package Central Platinum')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-success text-white mb-5">
                                 <div class="card-body">Central Platinum</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package North Platinum')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-danger text-white mb-5">
                                 <div class="card-body">North Platinum</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Package Custom')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-danger text-white mb-5">
                                 <div class="card-body">Custom</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Available Bookings</a>
+                                    <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@ if(!isset($_SESSION['useremail'])){
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fa fa-table mr-1"></i>
-                            All Booking Details
+                            <span id="topic">All Booking Details</span>
                         </div>
 
 
@@ -216,7 +216,7 @@ if(!isset($_SESSION['useremail'])){
                                             <th scope="col">Accept/Reject</th>
                                         </tr>
                                     </tfoot>
-                                    <tbody>
+                                    <tbody id="tableBody">
                                         <?php
                                             
                                             $result1=mysqli_query($mysqli,"SELECT * FROM bookings ORDER by id ASC");
@@ -246,7 +246,7 @@ if(!isset($_SESSION['useremail'])){
                         </div>
                     </div>
                 </div>
-            </main>
+            </main> 
                 <div style="margin-bottom: 150px;" class="container-fluid">
 
                 </div>
@@ -268,7 +268,33 @@ if(!isset($_SESSION['useremail'])){
             if(checkBox==true){
                 document.getElementById("buttonDel").disabled = false;
             }
-        }                                       
+        }  
+
+        function fliter(packageName) {
+            topicChange(packageName);
+            var input, filter, table, tr, td, i, txtValue;
+            input = packageName;
+            filter = input.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+            console.log(tr.length);
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[6];
+                console.log(td);
+                if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }       
+            }
+        }          
+
+        function topicChange(packageName){
+            document.getElementById("topic").innerHTML = packageName;
+        }                    
 
     </script>
 </body>
