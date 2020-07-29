@@ -3,7 +3,6 @@
     if(isset($_POST['submit'])){
         // 1. CONNECT TO THE DB SERVER, confirm connection
         mysqli_connect("localhost", "root", "") or die(mysql_error());
-        echo "<p>Connected to MySQL</p>";
         $mysqli = mysqli_connect("localhost", "root", ""); // redundant ?
 
         // Make my_db the current database
@@ -24,7 +23,6 @@
         // 2. CONNECT TO THE SPECIFIED DB, confirm connection
         $db = "travel1";
         mysqli_select_db($mysqli,$db) or die(mysql_error());
-        echo "<p>Connected to Database '$db'</p>";
         $db_connexn = mysqli_select_db($mysqli,$db)or die(mysql_error("can\'t connect to $db"));
 
         // 3. if table doesn't exist, create it
@@ -49,7 +47,7 @@
             echo "<p>" . $table . "table created</p>";
         }
         
-        echo "<p>" . $table . "table exists</p>";
+
 
         $fname=$_POST['first_name'];
         $lname=$_POST['last_name'];
@@ -58,16 +56,34 @@
         $package=$_POST['confirm_password'];
 
 
+        $query3 = "SELECT * FROM user where email='$semail'";
+        $res2=mysqli_query($mysqli,$query3);
+
+        if(!$res2){
+            die("Query Failed".mysqli_error($mysqli));
+
+        }
+
+        
+        while($row1=mysqli_fetch_array($res2))
+        {
+            $dbemail= $row1['email'];
+        }
+
+        $res3=null;
+        if($dbemail != $semail){
+            $res3=mysqli_query($mysqli,"INSERT INTO user(id,first_name,last_name,email,password) values('','$fname','$lname','$semail','$password1')");
+        }
 
 
-        $res=mysqli_query($mysqli,"INSERT INTO user(id,first_name,last_name,email,password) values('','$fname','$lname','$semail','$password1')");
-        if($res){
+        if($res3){
             header("location: reg.php");
 
         }
         else{
-            echo 'alert("Failed")';
+            echo "Already Signin";         
         }
+        
         
     }
         

@@ -29,7 +29,7 @@ if(!isset($_SESSION['useremail'])){
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <div class="sb-sidenav-menu-heading">Logged in as: <?php echo  $_SESSION['userLoggedin']  ?></div>
                         <a class="nav-link" href="dash.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-tachometer" aria-hidden="true"></i></div>
                             &nbsp Dashboard
@@ -65,10 +65,7 @@ if(!isset($_SESSION['useremail'])){
                         
                     </div>
                 </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    <?php echo  $_SESSION['userLoggedin']  ?>
-                </div>
+                
             </nav>
         </div>
         <div id="layoutSidenav_content">
@@ -229,7 +226,7 @@ if(!isset($_SESSION['useremail'])){
                                                 <form onload="loadForm()" action="./deleteBookings.php" method="POST">
                                                     <td> <input id="check" onClick="deleteRow()" type="checkbox" name="keyToDelete" value="<?php echo $row['id'];   ?>"> </td>
                                                     <td> <?php echo $row['id'];    ?> </td>
-                                                    <td> <?php echo $row['name'];    ?> </td>
+                                                    <td> <?php echo $row['date'];    ?> </td>
                                                     <td> <?php echo $row['name'];    ?> </td>
                                                     <td> <?php echo $row['email'];    ?> </td>
                                                     <td> <?php echo $row['vehical'];    ?> </td>

@@ -23,7 +23,7 @@ if(!isset($_SESSION['useremail'])){
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <div class="sb-sidenav-menu-heading">Logged in as: <?php echo  $_SESSION['userLoggedin']  ?></div>
                         <a class="nav-link" href="dash.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-tachometer" aria-hidden="true"></i></div>
                             &nbsp Dashboard
@@ -56,10 +56,6 @@ if(!isset($_SESSION['useremail'])){
                         </a>
 
                     </div>
-                </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    <?php echo  $_SESSION['userLoggedin']  ?>
                 </div>
             </nav>
         </div>
@@ -105,6 +101,7 @@ if(!isset($_SESSION['useremail'])){
     function matchPassword(){
         password1=document.getElementById('pass').value;
         cpassword1=document.getElementById('cPass').value;
+        
 
         if(password1===cpassword1){
             return;

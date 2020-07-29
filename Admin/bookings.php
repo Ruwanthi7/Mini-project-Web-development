@@ -1,8 +1,8 @@
 <?php
 
     if(isset($_POST['submit'])){
-        // 1. CONNECT TO THE DB SERVER, confirm connection
-        mysqli_connect("localhost", "root", "") or die(mysql_error());
+        // CONNECT TO THE DB SERVER, confirm connection
+        //mysqli_connect("localhost", "root", "") or die(mysql_error());
         $mysqli = mysqli_connect("localhost", "root", ""); // redundant ?
 
 
@@ -21,12 +21,12 @@
         }
 
 
-        // 2. CONNECT TO THE SPECIFIED DB, confirm connection
+        // CONNECT TO THE SPECIFIED DB, confirm connection
         $db = "travel1";
         mysqli_select_db($mysqli,$db) or die(mysql_error());
         $db_connexn = mysqli_select_db($mysqli,$db)or die(mysql_error("can\'t connect to $db"));
 
-        // 3. if table doesn't exist, create it
+        // if table doesn't exist, create it
         $table = "bookings";
         $query = "SELECT id FROM " . $table;
         //$result = mysql_query($mysqli, $query);
