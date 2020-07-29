@@ -218,7 +218,7 @@ if(!isset($_SESSION['useremail'])){
                                     </tfoot>
                                     <tbody>
                                         <?php
-                                            $mysqli=mysqli_connect("localhost","root","","travel1");
+                                            
                                             $result1=mysqli_query($mysqli,"SELECT * FROM bookings ORDER by id ASC");
                                             while ($row=mysqli_fetch_array($result1)) { 
                                         ?>

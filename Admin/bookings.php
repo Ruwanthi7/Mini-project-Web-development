@@ -1,9 +1,9 @@
 <?php
-
+    $mysqli = mysqli_connect("localhost","root","","travel1");
     if(isset($_POST['submit'])){
         // CONNECT TO THE DB SERVER, confirm connection
         //mysqli_connect("localhost", "root", "") or die(mysql_error());
-        $mysqli = mysqli_connect("localhost", "root", ""); // redundant ?
+         // redundant ?
 
 
         // Make my_db the current database

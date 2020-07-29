@@ -1,9 +1,11 @@
 <?php
+include("bookings.php");
+?>
+
+<?php
 
     if(isset($_POST['submit'])){
-        // 1. CONNECT TO THE DB SERVER, confirm connection
-        mysqli_connect("localhost", "root", "") or die(mysql_error());
-        $mysqli = mysqli_connect("localhost", "root", ""); // redundant ?
+
 
         // Make my_db the current database
         $db_selected = mysqli_select_db($mysqli,"travel1");

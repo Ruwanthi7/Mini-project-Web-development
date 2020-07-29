@@ -1,15 +1,7 @@
 
 <?php
-
-$dbhost="localhost";
-$dbname="travel1";
-$dbusername="root";
-$dbpass="";
-
-$mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
-
+include("bookings.php");
 ?>
-
 
 <?php
 
