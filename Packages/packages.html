@@ -99,7 +99,7 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"> 4 stars</span>
 
-                    <a  data-toggle="modal" onclick="detailModel('Customize Your Package')" data-target="#customexampleModal" class="btn btn-warning">Book Now</a>
+                    <a  data-toggle="modal" onclick="detailModel1('Customize Places')" data-target="#customexampleModal" class="btn btn-warning">Book Now</a>
                     </div>
                     
                 </div>
@@ -570,7 +570,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" name="package">Customize Places</h5>
+                <h5 class="modal-title" name="package" id="head1"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -580,7 +580,7 @@
                 
                 <div class="form-group">
                     <label>Package Name</label>
-                    <input type="text" id="packageName" class="form-control" name="pname" readonly>               
+                    <input type="text" id="packageName1" class="form-control" name="pname" readonly>               
                 </div>
                 <div class="form-group">
                     <label>Your Name</label>
@@ -644,10 +644,16 @@
 	function closeForm(){
 		document.getElementById("myForm").style.display = "none";
 	}
-
     function detailModel(package){
         document.getElementById('head').innerHTML=package; 
+        console.log("name: "+package);
         document.getElementById('packageName').value=package;
+    }
+
+    function detailModel1(package){
+        document.getElementById('head1').innerHTML=package; 
+        console.log("name: "+package);
+        document.getElementById('packageName1').value=package;
     }
 
 

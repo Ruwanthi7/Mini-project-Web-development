@@ -161,9 +161,9 @@ if(!isset($_SESSION['useremail'])){
                                 </div>
                             </div>
                         </div>
-                        <div style="cursor: pointer;" onclick="fliter('Package Custom')" class="col-xl-2 col-md-4" style="margin:auto">
+                        <div style="cursor: pointer;" onclick="fliter('Customize Places')" class="col-xl-2 col-md-4" style="margin:auto">
                             <div class="card bg-danger text-white mb-5">
-                                <div class="card-body">Custom</div>
+                                <div class="card-body">Customize Places</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-white stretched-link" >Available Bookings</a>
                                     <div class="small text-white"><i class="fa fa-angle-right"></i></div>
@@ -190,30 +190,30 @@ if(!isset($_SESSION['useremail'])){
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">SELECT</th>
-                                            <th scope="col">ID</th>    
+                                            <th scope="col">SELECT</th>   
                                             <th scope="col">DATE</th>                                        
                                             <th scope="col">NAME</th>
                                             <th scope="col">EMAIL</th>
                                             <th scope="col">VEHICLE</th>                                             
                                             <th scope="col">PACKAGE</th>
-                                            <th scope="col">REQUIRED DATE</th>
+                                            <th scope="col">PLACES</th>
+                                            <th scope="col">REQ DATE</th>
                                             <th scope="col">PHONE</th>
-                                            <th scope="col">Accept/Reject</th>
+                                            <th scope="col">Approvement</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th scope="col">SELECT</th>
-                                            <th scope="col">ID</th>    
+                                            <th scope="col">SELECT</th>   
                                             <th scope="col">DATE</th>                                        
                                             <th scope="col">NAME</th>
                                             <th scope="col">EMAIL</th>
                                             <th scope="col">VEHICLE</th>                                            
                                             <th scope="col">PACKAGE</th>
-                                            <th scope="col">REQUIRED DATE</th>
+                                            <th scope="col">PLACES</th>
+                                            <th scope="col">REQ DATE</th>
                                             <th scope="col">PHONE</th>
-                                            <th scope="col">Accept/Reject</th>
+                                            <th scope="col">Approvement</th>
                                         </tr>
                                     </tfoot>
                                     <tbody id="tableBody">
@@ -225,15 +225,15 @@ if(!isset($_SESSION['useremail'])){
                                                 <tr>
                                                 <form onload="loadForm()" action="./deleteBookings.php" method="POST">
                                                     <td> <input id="check" onClick="deleteRow()" type="checkbox" name="keyToDelete" value="<?php echo $row['id'];   ?>"> </td>
-                                                    <td> <?php echo $row['id'];    ?> </td>
                                                     <td> <?php echo $row['date'];    ?> </td>
                                                     <td> <?php echo $row['name'];    ?> </td>
                                                     <td> <?php echo $row['email'];    ?> </td>
                                                     <td> <?php echo $row['vehical'];    ?> </td>
                                                     <td> <?php echo $row['package'];    ?> </td>
+                                                    <td> <?php echo $row['places'];    ?> </td>
                                                     <td> <?php echo $row['required_date'];    ?> </td>
                                                     <td> <?php echo $row['phone'];    ?> </td>
-                                                    <td > <div style="margin:auto">&nbsp &nbsp <i style="color:blue" class="fa fa-check-circle" aria-hidden="true"></i> &nbsp &nbsp <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;" id="buttonDel" name="delete" > <i style="color:red"  class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
+                                                    <td > <div style="margin:auto">&nbsp &nbsp <i style="color:blue;cursor:pointer" class="fa fa-check-circle" aria-hidden="true"></i> &nbsp &nbsp <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;" id="buttonDel" name="delete" > <i style="color:red"  class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
                                                 </form>
                                                 </tr>
 
@@ -279,15 +279,17 @@ if(!isset($_SESSION['useremail'])){
             tr = table.getElementsByTagName("tr");
             console.log(tr.length);
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[6];
+                
+                td = tr[i].getElementsByTagName("td")[5];
                 console.log(td);
                 if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } 
+                    else {
+                        tr[i].style.display = "none";
+                    }
                 }       
             }
         }          

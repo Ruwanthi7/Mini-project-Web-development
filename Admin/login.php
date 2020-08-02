@@ -1,10 +1,5 @@
 <?php
-$dbhost="localhost";
-$dbname="travel1";
-$dbusername="root";
-$dbpass="";
-
-$mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
+include("bookings.php");
 ?>
 <?php session_start(); ?>
 
@@ -18,25 +13,25 @@ $mysqli=mysqli_connect($dbhost,$dbusername,$dbpass,$dbname);
 
 
         	// Make my_db the current database
-            $db_selected = mysqli_select_db($mysqli,"travel1");
+            // $db_selected = mysqli_select_db($mysqli,"travel1");
 
-            if (!$db_selected) {
-            // If we couldn't, then it either doesn't exist, or we can't see it.
-            $sql = 'CREATE DATABASE travel1';
+            // if (!$db_selected) {
+            // // If we couldn't, then it either doesn't exist, or we can't see it.
+            // $sql = 'CREATE DATABASE travel1';
 
-            if (mysqli_query($mysqli,$sql)) {
-                echo "Database my_db created successfully\n";
-            } else {
-                echo 'Error creating database: ' . mysql_error() . "\n";
-            }
-            }
+            // if (mysqli_query($mysqli,$sql)) {
+            //     echo "Database my_db created successfully\n";
+            // } else {
+            //     echo 'Error creating database: ' . mysql_error() . "\n";
+            // }
+            // }
 
 
-            // 2. CONNECT TO THE SPECIFIED DB, confirm connection
-            $db = "travel1";
-            mysqli_select_db($mysqli,$db) or die(mysql_error());
+            // // 2. CONNECT TO THE SPECIFIED DB, confirm connection
+            // $db = "travel1";
+            // mysqli_select_db($mysqli,$db) or die(mysql_error());
 
-            $db_connexn = mysqli_select_db($mysqli,$db)or die(mysql_error("can\'t connect to $db"));
+            // $db_connexn = mysqli_select_db($mysqli,$db)or die(mysql_error("can\'t connect to $db"));
 
             // 3. if table doesn't exist, create it
             $table = "user";
