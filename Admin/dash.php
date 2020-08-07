@@ -223,8 +223,8 @@ if(!isset($_SESSION['useremail'])){
                                             while ($row=mysqli_fetch_array($result1)) { 
                                         ?>
                                                 <tr>
-                                                <form onload="loadForm()" action="./deleteBookings.php" method="POST">
-                                                    <td> <input id="check" onClick="deleteRow()" type="checkbox" name="keyToDelete" value="<?php echo $row['id'];   ?>"> </td>
+                                                <form onload="loadForm()" action="./approvement.php" method="POST">
+                                                    <td> <input id="check" onClick="selectRow()" type="checkbox" name="keyToSelect" value="<?php echo $row['id'];   ?>"> </td>
                                                     <td> <?php echo $row['date'];    ?> </td>
                                                     <td> <?php echo $row['name'];    ?> </td>
                                                     <td> <?php echo $row['email'];    ?> </td>
@@ -233,9 +233,20 @@ if(!isset($_SESSION['useremail'])){
                                                     <td> <?php echo $row['places'];    ?> </td>
                                                     <td> <?php echo $row['required_date'];    ?> </td>
                                                     <td> <?php echo $row['phone'];    ?> </td>
-                                                    <td > <div style="margin:auto">&nbsp &nbsp <i style="color:blue;cursor:pointer" class="fa fa-check-circle" aria-hidden="true"></i> &nbsp &nbsp <button style="background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;outline:none;" id="buttonDel" name="delete" > <i style="color:red"  class="fa fa-trash-o" aria-hidden="true"></i></button> </div></td>
+                                                    <td > <div style="margin:auto">&nbsp &nbsp 
+                                                    </i> &nbsp &nbsp 
+                                                    <button style="background-color: Transparent;background-repeat:no-repeat;border: 
+                                                    none;cursor:pointer;overflow: hidden;outline:none;" id="buttonSel" name="select" > 
+                                                        <i style="color:blue" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                    </button> 
+
+                                                    <button style="background-color: Transparent;background-repeat:no-repeat;border: 
+                                                    none;cursor:pointer;overflow: hidden;outline:none;" id="buttonDel" name="delete" > 
+                                                        <i style="color:red"  class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    </button> </div></td>
                                                 </form>
                                                 </tr>
+                                                
 
                                     <?php   } ?>
 
@@ -262,11 +273,12 @@ if(!isset($_SESSION['useremail'])){
             document.getElementById("buttonDel").disabled = true;
         }
 
-        function deleteRow(){
+        function selectRow(){
             var checkBox = document.getElementById("check");
 
             if(checkBox==true){
                 document.getElementById("buttonDel").disabled = false;
+                document.getElementById("buttonSel").disabled = false;
             }
         }  
 
